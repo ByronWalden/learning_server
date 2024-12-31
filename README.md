@@ -25,11 +25,11 @@ Check out the [nestjs-project-performance](https://github.com/CatsMiaow/nestjs-p
 ## Installation
 
 ```sh
-# 1. node_modules
+# 1. node_modules install的作用
 npm ci
-# 2. When synchronize database from existing entities
+# 2. 当需要从现有实体同步数据库时
 npm run entity:sync
-# 2-1. When import entities from an existing database
+# 2-1. 当需要从现有数据库导入实体时
 npm run entity:load
 ```
 
@@ -72,26 +72,26 @@ npm start
 +-- public // Static Files
 +-- src
 |   +-- config // Environment Configuration
-|   +-- entity // TypeORM Entities
-|   +-- auth // Authentication
-|   +-- common // Global Nest Module
-|   |   +-- constants // Constant value and Enum
-|   |   +-- controllers // Nest Controllers
-|   |   +-- decorators // Nest Decorators
-|   |   +-- dto // DTO (Data Transfer Object) Schema, Validation
-|   |   +-- filters // Nest Filters
-|   |   +-- guards // Nest Guards
-|   |   +-- interceptors // Nest Interceptors
-|   |   +-- interfaces // TypeScript Interfaces
-|   |   +-- middleware // Nest Middleware
-|   |   +-- pipes // Nest Pipes
-|   |   +-- providers // Nest Providers
-|   |   +-- * // models, repositories, services...
-|   +-- shared // Shared Nest Modules
+|   +-- entity // TypeORM Entities 定义数据库模型。
+|   +-- auth // Authentication 认证 例如用户登录注册
+|   +-- common // Global Nest Module 常量、控制器、装饰器、DTO、过滤器、守卫、拦截器、接口、中间件、管道、提供者  
+|   |   +-- constants // Constant value and Enum 常量
+|   |   +-- controllers // Nest Controllers 控制器
+|   |   +-- decorators // Nest Decorators 装饰器
+|   |   +-- dto // DTO (Data Transfer Object) Schema, Validation DTO
+|   |   +-- filters // Nest Filters 过滤器
+|   |   +-- guards // Nest Guards 守卫
+|   |   +-- interceptors // Nest Interceptors 拦截器
+|   |   +-- interfaces // TypeScript Interfaces 接口
+|   |   +-- middleware // Nest Middleware 中间件
+|   |   +-- pipes // Nest Pipes 管道
+|   |   +-- providers // Nest Providers 提供者
+|   |   +-- * // models, repositories, services... 模型、仓库、服务
+|   +-- shared // Shared Nest Modules 共享的Nest模块，存放多个模块之间共享的代码
 |   +-- gql // GraphQL Structure
 |   +-- * // Other Nest Modules, non-global, same as common structure above
 +-- test // Jest testing
-+-- typings // Modules and global type definitions
++-- typings // Modules and global type definitions 全局类型定义
 
 // Module structure
 // Add folders according to module scale. If it's small, you don't need to add folders.

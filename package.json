@@ -21,7 +21,15 @@
     "test": "jest --detectOpenHandles -i",
     "test:e2e": "jest --config ./test/jest.e2e.ts -i",
     "doc": "compodoc -p tsconfig.json -s -d docs",
-    "doc:api": "npm run build && node dist/swagger"
+    "doc:api": "npm run build && node dist/swagger",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:clean": "docker-compose down -v --remove-orphans",
+    "docker:ps": "docker-compose ps",
+    "docker:exec": "docker-compose exec app sh"
   },
   "dependencies": {
     "@apollo/server": "^4.11.2",

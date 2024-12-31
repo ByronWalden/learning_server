@@ -11,6 +11,7 @@ import { CommonModule, ExceptionsFilter } from './common';
 import { configuration, loggerOptions } from './config';
 import { SampleModule as DebugSampleModule } from './debug';
 import { GqlModule } from './gql';
+import { HanziModule } from './hanzi';
 import { SampleModule } from './sample';
 
 @Module({
@@ -46,6 +47,7 @@ import { SampleModule } from './sample';
     SampleModule,
     GqlModule,
     DebugSampleModule,
+    HanziModule,
     // Module Router
     // https://docs.nestjs.com/recipes/router-module
     RouterModule.register([
